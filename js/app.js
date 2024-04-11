@@ -5,10 +5,41 @@ const menuIcon = document.querySelector('#menu-icon');
 const navBar = document.querySelector('.navbar');
 const header = document.querySelector('header');
 
+// Variável global para controlar se a animação já foi executada
+let animationExecuted = false;
+
+// Função para revelar elementos com ScrollReveal
+function revealElements(selector, origin) {
+    ScrollReveal().reveal(selector, {
+        origin: origin,
+        distance: '80px',
+        duration: 2000,
+        delay: 200
+    });
+}
+
+// Função para iniciar a animação se ainda não foi executada
+function startAnimation() {
+    if (!animationExecuted) {
+        setTimeout(() => {
+            revealElements('.home-content, .heading', 'top');
+            revealElements('.home-img, .skills-container, .hobbies-container, .projects-box, .contact form', 'bottom');
+            revealElements('.home-content h1, .about-img', 'left');
+            revealElements('.home-content p, .about-content', 'right');
+
+            animationExecuted = true;
+        }, 500); // Atraso de 500 milissegundos (meio segundo) antes de iniciar a animação
+    }
+}
+
+// Elementos a serem revelados quando a página é carregada
+document.addEventListener('DOMContentLoaded', startAnimation);
+
 // Toggle menu
 menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('bx-x');
     navBar.classList.toggle('active');
+    startAnimation(); // Inicia a animação ao clicar no menu
 });
 
 // Função para atualizar os links ativos
@@ -43,38 +74,7 @@ window.addEventListener('scroll', () => {
     navBar.classList.remove('active');
 });
 
-// Configurações do ScrollReveal
-ScrollReveal({ 
-    // reset: true, 
-    distance: '80px',
-    duration: 2000,
-    delay: 200
-});
-
-// Função para revelar elementos com ScrollReveal
-function revealElements(selector, origin) {
-    ScrollReveal().reveal(selector, { origin: origin });
-}
-
-function revealAnimation(){
-    // Elementos a serem revelados
-    revealElements('.home-content, .heading', 'top');
-    revealElements('.home-img, .skills-container, .hobbies-container, .projects-box, .contact form', 'bottom');
-    revealElements('.home-content h1, .about-img', 'left');
-    revealElements('.home-content p, .about-content', 'right');
-}
-
-// Configurações do Typed.js
-const typed = new Typed('.multiple-text', {
-    strings: ['Desenvolvedor Front-end', 'Analista de Suporte Técnico', ''],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
-});
-
 // Rolar para o topo ao carregar a página
-window.onload = function() {
-    scrollToTop();  
-    revealAnimation();  
+window.onload = function () {
+    scrollToTop();
 };
