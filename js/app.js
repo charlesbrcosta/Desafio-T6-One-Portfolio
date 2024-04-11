@@ -23,7 +23,7 @@ function startAnimation() {
     if (!animationExecuted) {
         setTimeout(() => {
             revealElements('.home-content, .heading', 'top');
-            revealElements('.home-img, .skills-container, .hobbies-container, .projects-box, .contact form', 'bottom');
+            revealElements('.home-img, .skills-container, .hobbies-container, .training-container h3, .training-container h4, .training-box p, .training-icon i, training-icon p, .experience-container h3, .experience-container h4, .experience-box p, .experience-icon i, experience-icon p, .projects-box, .contact form', 'bottom');
             revealElements('.home-content h1, .about-img', 'left');
             revealElements('.home-content p, .about-content', 'right');
 
@@ -74,7 +74,7 @@ window.addEventListener('scroll', () => {
     navBar.classList.remove('active');
 });
 
-// Rolar para o topo ao carregar a página
+//Rolar para o topo ao carregar a página
 window.onload = function () {
     scrollToTop();
 };

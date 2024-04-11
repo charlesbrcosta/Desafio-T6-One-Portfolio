@@ -16,9 +16,11 @@
 :root {
     --bg-color: #1f242d;
     --second-bg-color: #323946;
+    --third-color: #bababa;
     --text-color: #fff;
     --main-color: #0ef;
     --menu-color: #161616;
+   
 }
 
 /* initial settings*/
@@ -81,7 +83,7 @@ section {
     display: none;
 }
 
-/* styles section */
+/* styles section home*/
 .home {
     display: flex;
     justify-content: center;
@@ -117,6 +119,9 @@ span {
     
 }
 
+/* End section home*/
+
+/* social media */
 .social-media a{
     display: inline-flex;
     justify-content: center;
@@ -163,7 +168,10 @@ span {
     box-shadow: none;
 }
 
+/* End social-media */
 
+
+/* about */
 .about {
     display: flex;
     justify-content: center;
@@ -197,6 +205,10 @@ span {
     margin: 2rem 0 3rem;
 }
 
+/* End about */
+
+
+/* skills */ 
 .skills h2 {
     margin-bottom: 5rem;
 }
@@ -237,7 +249,9 @@ span {
     font-size:  1.6rem;
     margin: 1rem 0 3rem;
 } 
+/* End skills */
 
+/* hobbies */
 .hobbies {
     background-color: var(--second-bg-color);
 }
@@ -282,12 +296,62 @@ span {
     font-size:  1.6rem;
     margin: 1rem 0 3rem;
 }
+/* End hobbies */
+
+/* trajectory */
+
+.trajectory h2{
+    margin-bottom: 5rem;
+}
+
+.trajectory-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+}
+
+.trajectory-container h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.training-box,
+.experience-box {
+    margin: 3rem 0;
+}
+
+.training-box h4,
+.experience-box h4 {
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: var(--main-color);
+    padding: 0.1rem 0;
+}
+
+.training-box p,
+.experience-box p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 0.1rem 0;
+}
+
+.training-icon,
+.experience-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.6rem;
+    color: var(--third-color);
+}
+
+.training-icon i,
+.experience-icon i {
+    color: var(--main-color);
+}
+/* End trajectory */
 
 /* projects */
-/* .projects {
-    background-color: var(--second-bg-color);
-} */
-
 .projects h2 {
     margin-bottom: 4rem;
 }
@@ -365,13 +429,13 @@ span {
 }
 
 .projects-layer a:hover {
-    background-color: var(--main-color);
-    box-shadow: 0 0 0.2rem var(--bg-color);
+    background-color: var(--second-bg-color);
+    box-shadow: 0 0 0.2rem var(--main-color);
     
 }
 
 .projects-layer a:hover i{
-    color: var(--bg-color);
+    color: var(--text-color);
     transform: scale(1.06);
 }
 
@@ -422,6 +486,9 @@ span {
 
 /* Footer */
 .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -470,8 +537,8 @@ span {
         font-size: 55%
     };
 
-    .footer-text p {
-
+    .footer {
+        position: static;
     }
 
     .footer-iconTop {
@@ -517,6 +584,21 @@ span {
         font-size: 2rem;
         margin: 3rem 0;
     }
+
+    .trajectory-container h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .training-box h4,
+    .experience-box h4 {
+        font-size: 1.7rem;
+    }
+
+    /* .training-box p,
+    .experience-box p {
+        font-size: 1.6rem;
+    } */
 
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
@@ -601,6 +683,11 @@ span {
         margin-bottom: 3rem;
     }
 
+    .trajectory-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -653,12 +740,12 @@ span {
 
     .footer {
         flex-direction: column-reverse;
-    }
-
-    .footer p {
-        text-align: center;
-        margin-top: 2rem;
+        justify-content: center;
     } 
+
+    .footer-iconTop {
+        margin-bottom: 2rem;
+    }
 }
 
 /* End Reponsive */
