@@ -19,8 +19,7 @@
     --third-color: #bababa;
     --text-color: #fff;
     --main-color: #0ef;
-    --menu-color: #161616;
-   
+    --menu-color: #161616;   
 }
 
 /* initial settings*/
@@ -115,10 +114,8 @@ span {
 }
 
 .home-img img {
-    width: 30vw;
-    
+    width: 30vw;    
 }
-
 /* End section home*/
 
 /* social media */
@@ -161,13 +158,11 @@ span {
     border-radius: 4rem;
 
     transition: 0.5s ease;
-
 }
 
 .btn:hover {
     box-shadow: none;
 }
-
 /* End social-media */
 
 
@@ -204,7 +199,6 @@ span {
     text-align: justify;
     margin: 2rem 0 3rem;
 }
-
 /* End about */
 
 
@@ -299,7 +293,6 @@ span {
 /* End hobbies */
 
 /* trajectory */
-
 .trajectory h2{
     margin-bottom: 5rem;
 }
@@ -438,7 +431,6 @@ span {
     color: var(--text-color);
     transform: scale(1.06);
 }
-
 /*End projects*/
 
 /* Contacts */
@@ -502,10 +494,6 @@ span {
     margin-right: 4rem;
 }
 
-/* .footer-iconTop {
-    display: none;
-} */
-
 .footer-iconTop {
     display: none;
 }
@@ -530,22 +518,6 @@ span {
 /* End Footer */
 
 /* Reponsive */
-
-/* @media screen and (max-width: 1420px){
-    html {
-        overflow: scroll;
-        font-size: 55%
-    };
-
-    .footer {
-        position: static;
-    }
-
-    .footer-iconTop {
-        display: block;
-    }
-} */
-
 @media screen and (max-width: 1180px){
 
     html {
@@ -605,11 +577,6 @@ span {
         font-size: 1.7rem;
     }
 
-    /* .training-box p,
-    .experience-box p {
-        font-size: 1.6rem;
-    } */
-
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -652,10 +619,6 @@ span {
     .projects {
         padding-bottom: 7rem;
     }
-
-    /* .contact {
-        min-height: auto;
-    } */
 
     .contact {
         
@@ -717,10 +680,6 @@ span {
     .projects-layer p {
         font-size: 1.5rem;
     }
-
-    /* .contact {
-        min-height: 1rem;
-    } */
 }
 
 @media screen and (max-width: 665px) {
