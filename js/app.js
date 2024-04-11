@@ -1,66 +1,80 @@
-let section = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+// Elementos da página
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('header nav a');
+const menuIcon = document.querySelector('#menu-icon');
+const navBar = document.querySelector('.navbar');
+const header = document.querySelector('header');
 
-let menuIcon = document.querySelector('#menu-icon');
-let navBar = document.querySelector('.navbar');
-
-//toggle navbar
-menuIcon.onclick = () => {
+// Toggle menu
+menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('bx-x');
     navBar.classList.toggle('active');
-};
+});
 
-// active links 
-window.onscroll = () => {
-    section.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight
-        let id = sec.getAttribute('id');
+// Função para atualizar os links ativos
+function updateActiveLinks() {
+    const scrollTop = window.scrollY;
 
-        if(top >= offset && top < offset + height){
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            document.querySelector(`header nav a[href*="${sectionId}"]`).classList.add('active');
         }
     });
+}
 
-    //navbar
-    let header = document.querySelector('header');
+// Função para rolar a página para o topo
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Rola suavemente
+    });
+}
 
-    header.classList.toggle('tik', window.scrollY > 100);
-
+// Atualizar links ativos no scroll
+window.addEventListener('scroll', () => {
+    header.classList.toggle('sticky', window.scrollY > 100);
+    updateActiveLinks();
     menuIcon.classList.remove('bx-x');
     navBar.classList.remove('active');
-};
+});
 
-//scrollReveal
-
+// Configurações do ScrollReveal
 ScrollReveal({ 
     // reset: true, 
     distance: '80px',
     duration: 2000,
     delay: 200
 });
-    
-ScrollReveal().reveal('.home-content, .heading',  { origin: 'top' });
-ScrollReveal().reveal('.home-img, .skills-container, .hobbies-container, .projects-box, .contact form',  { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img',  { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content',  { origin: 'right' });
 
+// Função para revelar elementos com ScrollReveal
+function revealElements(selector, origin) {
+    ScrollReveal().reveal(selector, { origin: origin });
+}
 
-ScrollReveal().reveal('.box1, .box2, .box3',  { origin: 'top' });
-ScrollReveal().reveal('.box4, .box5, .box6',  { origin: 'bottom' });
+function revealAnimation(){
+    // Elementos a serem revelados
+    revealElements('.home-content, .heading', 'top');
+    revealElements('.home-img, .skills-container, .hobbies-container, .projects-box, .contact form', 'bottom');
+    revealElements('.home-content h1, .about-img', 'left');
+    revealElements('.home-content p, .about-content', 'right');
+}
 
-
-
-//typed js
+// Configurações do Typed.js
 const typed = new Typed('.multiple-text', {
     strings: ['Desenvolvedor Front-end', 'Analista de Suporte Técnico', ''],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
     loop: true
-    
 });
+
+// Rolar para o topo ao carregar a página
+window.onload = function() {
+    scrollToTop();  
+    revealAnimation();  
+};
