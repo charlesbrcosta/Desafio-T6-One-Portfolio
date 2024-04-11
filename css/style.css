@@ -531,7 +531,7 @@ span {
 
 /* Reponsive */
 
-@media screen and (max-width: 1420px){
+/* @media screen and (max-width: 1420px){
     html {
         overflow: scroll;
         font-size: 55%
@@ -544,9 +544,15 @@ span {
     .footer-iconTop {
         display: block;
     }
-}
+} */
 
 @media screen and (max-width: 1180px){
+
+    html {
+        
+        font-size: 55%
+    };
+
     .projects-layer h4 {
         font-size: 1.9rem;
     }
@@ -557,6 +563,10 @@ span {
 }
 
 @media screen and (max-width: 1060px){
+    
+    html {
+        overflow: scroll;
+    }
 
     #menu-icon {
         display: block;
@@ -610,6 +620,14 @@ span {
     
     .projects-layer p {
         font-size: 1.6rem;
+    }
+
+    .footer {
+        position: static;
+    }
+
+    .footer-iconTop {
+        display: block;
     }
 }
 
