@@ -199,10 +199,6 @@ span {
     text-align: justify;
     margin: 2rem 0 3rem;
 }
-
-.aboutSmallText {
-    display: none;
-}
 /* End about */
 
 
@@ -528,14 +524,6 @@ span {
         
         font-size: 55%
     };
-
-    .aboutFullText {
-        display: none;
-    }
-
-    .aboutSmallText {
-        display: block;
-    }
 
     .projects-layer h4 {
         font-size: 1.9rem;
