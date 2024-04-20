@@ -20,7 +20,7 @@ O diferencial deste projeto está na busca incessante por conhecimento em divers
 
 ## :mag: Demonstração
 
-Para uma experiência completa do funcionamento do projeto, você pode acessar a demonstração interativa do Portfolio Github Page: [clique aqui.](https://charlesbrcosta.github.io/portfolio-challange/)
+Para uma experiência completa do funcionamento do projeto, você pode acessar a demonstração interativa do Portfolio Github Page: [clique aqui.](https://charlesbrcosta.github.io/Desafio-T6-One-Portfolio/)
 
 ## :warning: Pré-requisitos
 
@@ -31,8 +31,8 @@ Para uma experiência completa do funcionamento do projeto, você pode acessar a
 1. Clone o repositório:
 
    ```bash
-   git clone https://charlesbrcosta.github.io/portfolio-challange/
-   cd seu-projeto
+   git clone https://charlesbrcosta.github.io/Desafio-T6-One-Portfolio/
+   cd Desafio-T6-One-Portfolio
 
 2. Abra o arquivo index.html no seu navegador.
 
