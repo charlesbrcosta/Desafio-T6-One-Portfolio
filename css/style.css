@@ -20,6 +20,8 @@
     --text-color: #fff;
     --main-color: #0ef;
     --menu-color: #161616;   
+    --error-color: #d83200;
+    --sucess-color: #08a900;
 }
 
 /* initial settings*/
@@ -438,6 +440,17 @@ span {
     margin-bottom: 3rem;
 }
 
+.error-message {    
+    visibility: hidden;
+    font-size: 2rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.error-message.visibled{
+    visibility: visible;
+}
+
 .contact form {
     max-width: 70rem;
     margin: 1rem auto;
@@ -448,7 +461,7 @@ span {
 .contact form .input-box {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .contact form .input-box input,
@@ -474,6 +487,7 @@ span {
     margin-top: 2rem;
     cursor: pointer; 
 }
+
 /* End Contacts */
 
 /* Footer */

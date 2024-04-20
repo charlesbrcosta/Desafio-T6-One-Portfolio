@@ -1,4 +1,4 @@
-# Portfolio - #challenge ONE T6
+# Desafio T6 - One: Portfolio
 
 Este projeto tem como objetivo aplicar o conhecimento adquirido através do curso da Alura e da Oracle Next One para enfrentar o desafio do Challenge 2. O desafio propôs a criação de um portfólio completo, incluindo seções como "Sobre Mim", "Hobbies", "Habilidades", "Projetos", "Educação e Formação", "Experiência Profissional" e "Contato".
 
@@ -20,7 +20,7 @@ O diferencial deste projeto está na busca incessante por conhecimento em divers
 
 ## :mag: Demonstração
 
-Para uma experiência completa do funcionamento do projeto, você pode acessar a demonstração interativa do Portfolio Github Page: [clique aqui.](https://charlesbrcosta.github.io/portfolio-challange/) ou pela Vercel: [clique aqui.](https://portfolio-challange.vercel.app/) 
+Para uma experiência completa do funcionamento do projeto, você pode acessar a demonstração interativa do Portfolio Github Page: [clique aqui.](https://charlesbrcosta.github.io/portfolio-challange/)
 
 ## :warning: Pré-requisitos
 

@@ -83,38 +83,7 @@ window.addEventListener('scroll', () => {
     navBar.classList.remove('active');
 });
 
-//validação formulario de contato
-document.addEventListener("DOMContentLoaded", function() {
-    const formMy = document.getElementById("myForm");
-    const buttonSubmit = document.getElementById("submit");
-
-    const fields = document.querySelectorAll("input, textarea");
-
-    fields.forEach(function(field) {
-        field.addEventListener("input", function() {
-            const allFieldIn = Array.from(fields).every(function(c) {
-                return c.value.trim() !== "";
-            });
-
-            if (allFieldIn) {
-                buttonSubmit.removeAttribute("disabled"); // Habilita o botão
-            } else {
-                buttonSubmit.setAttribute("disabled", "disabled"); // Desabilita o botão
-            }
-        });
-    });
-
-    formMy.addEventListener("submit", function(event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
-        
-        alert("Formulário enviado com sucesso!");
-        formMy.reset(); // Limpa o formulário após o envio
-        buttonSubmit.setAttribute("disabled", "disabled"); // Desativa o botão após o envio
-    });
-});
-
-
 //Rolar para o topo ao carregar a página
-window.onload = function () {
+window.onload = () => {
     scrollToTop();
-};
+}

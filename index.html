@@ -319,20 +319,21 @@
     <!-- section contact -->
     <section class="contact" id="contact">
         <h2 class="heading">Contate - <span>me</span></h2>
+        <p class="error-message visibled" id="errorMessage">Mensagem de erro aqui</p>
 
-        <form id="myForm"action="#">
+        <form id="form"action="https://formsubmit.co/bruno.dev@gmail.com" method="POST">
             <div class="input-box">
-                <input type="text" id="nameComplete" placeholder="Nome Completo"  required/>
-                <input type="email" id="email" placeholder="E-mail"  required/>
+                <input type="text" id="userName" placeholder="Nome Completo"  required/>
+                <input type="email" id="userEmail" placeholder="E-mail"  required/>
             </div>
 
             <div class="input-box">
-                <input type="number" id="number" placeholder="Número do Tefone"  required/>
+                <input type="text" id="phoneNumber" placeholder="Número do Tefone"  required/>
                 <input type="text" id="subject" maxlength="50" placeholder="Asssunto do E-mail"  required/>
             </div>
 
             <textarea id="message" maxlength="300" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
-            <input type="submit" id="submit" value="Enviar" class="btn" disabled/>
+            <input type="submit" id="submit" value="Enviar" class="btn" />
 
         </form>
         
@@ -361,5 +362,8 @@
 
     <!-- Script -->
     <script src="./js/app.js" defer></script>
+
+    <!-- Script Form -->
+    <script src="./js/form.js" defer></script>
 </body>
 </html>
