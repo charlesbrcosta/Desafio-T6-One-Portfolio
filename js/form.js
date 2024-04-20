@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
             
             // messageError.innerText = ''; // Limpa a mensagem de sucesso
             msgError.classList.add('visibled');
-            messageError.innerText = 'Nome deve ter mais de 15 caracteres';
+            messageError.innerText = 'Nome deve ter no mínimo 15 caracteres';
             name.style.outline = '1px solid var(--error-color)';
             messageError.style.color = 'var(--error-color)'; // Cor vermelha para mensagens de erro
             
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if(subjectInput.value.length < 15){
             // messageError.innerText = '';
             msgError.classList.add('visibled');
-            messageError.innerText = 'Assunto de ter 15 ou mais caracteres';
+            messageError.innerText = 'Assunto deve ter no mínimo 15 caracteres';
             subjectInput.style.outline = '1px solid var(--error-color)';
             messageError.style.color = 'var(--error-color)';
 
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (messageInput.value.length < 15 || messageInput.value.length > 300) {
             // messageError.innerText = ''; // Limpa a mensagem de sucesso
             msgError.classList.add('visibled');
-            messageError.innerText = 'Mensagem deve ter entre 15 e 300 caracteres';
+            messageError.innerText = 'Mensagem deve ter entre 15 a 300 caracteres';
             messageInput.style.outline = '1px solid var(--error-color)'
             messageError.style.color = 'var(--error-color)'; // Cor vermelha para mensagens de erro
             
